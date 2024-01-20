@@ -3,7 +3,40 @@
     padding: 0;
 }
 
-.header{
+.info{
     display: flex;
     flex-direction: row;
+    font-family:"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 20px;
+    font-weight: 600;
+}
+.image{
+    border-radius: 50%;
+    height: 170px;
+    border: 1px solid black;
+}
+.a{
+    border: 3px solid black;
+    margin:10px 10px;
+    padding: 10px;
+}
+
+.lang{
+    background: #05a1b8;
+    color: white;
+    width: 12%;
+}
+
+.name{
+    color: #05a1b8;
+    font-size: 30px;
+     font-weight: 500;
+}
+.repodesc{
+    font-weight: 500;
+}
+
+.repos{
+    display: grid;
+    grid-template-columns: 40% 40%;
 }

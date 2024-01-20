@@ -3,7 +3,7 @@ const API = "https://api.github.com/users/";
 const button = document.querySelector(".submit");
 const input = document.querySelector(".input");
 const username = document.querySelector(".username");
-const Description = document.querySelector(".desc");
+const desc = document.querySelector(".desc");
 const loc = document.querySelector(".location");
 const twitter = document.querySelector(".twitter");
 const image = document.querySelector(".image");
@@ -22,10 +22,10 @@ button.addEventListener('click', () => {
             username.innerHTML=fetchedUsername;
 
             const bio=data.bio;
-           if(bio!==null) desc.innerHTML=bio;
+           if(bio!=null) desc.innerHTML=bio;
 
             const loca=data.location;
-           if(loca!==null) loc.innerHTML=loca;
+           if(loca!==null) loc.innerHTML=`<i class="fa-solid fa-location-dot"></i> ${loca}`;
 
             const twit=data.twitter_username;
            if(twit!==null) twitter.innerHTML=twit;
@@ -33,8 +33,8 @@ button.addEventListener('click', () => {
             const img=data.avatar_url;
            image.src=img;
 
-            const giturl=data.url;
-           githublink.innerHTML=giturl;
+            const giturl=data.html_url;
+           githublink.innerHTML=`<i class="fa-solid fa-link"></i> ${giturl}`;
 
             const repourl=data.repos_url;
             fetch(repourl)
@@ -43,10 +43,10 @@ button.addEventListener('click', () => {
                 console.log(data);
                 let a=""
                 data.map((value)=>{
-                   a+=`<div>
-                    <div>${value.name}</div>
-                    <div>${value.description}</div>
-                    <div>${value.language}</div>
+                   a+=`<div class="a">
+                    <div class="name">${value.name}</div>
+                    <div class="repodesc">${value.description}</div>
+                    <div class="lang">${value.language}</div>
                    </div>`
                 })
                 repos.innerHTML=a;

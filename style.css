@@ -21,11 +21,13 @@
     padding: 10px;
 }
 
-.lang{
+.topic{
     background: #05a1b8;
     color: white;
     width: fit-content;
     padding: 2px;
+    border-radius: 2px;
+    margin: 0 3px;
 }
 
 .name{

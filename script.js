@@ -13,6 +13,10 @@ const repos = document.querySelector(".repos");
 button.addEventListener('click', () => {
     const value = input.value;
     const apiurl = `https://api.github.com/users/${value}`;
+    document.getElementById("loader").style.display = 'block';
+    setTimeout(function(){
+      document.getElementById("loader").style.display = 'none';
+    
 
     fetch(apiurl)
         .then((res) => res.json())
@@ -45,7 +49,7 @@ button.addEventListener('click', () => {
                 data.map((value)=>{
                    a+=`<div class="a">
                     <div class="name">${value.name}</div>
-                    <div class="repodesc">${value.description}</div>
+                    <div class="repodesc">${value.description===null?'-':value.description}</div>
                     <div class="lang">${value.language}</div>
                    </div>`
                 })
@@ -53,7 +57,9 @@ button.addEventListener('click', () => {
             })
 
         })
+        
         .catch((error) => {
             console.error("Error fetching data:", error);
         });
+    }, 2000);
 });

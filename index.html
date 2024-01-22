@@ -13,7 +13,7 @@
         <input type="text" class=" input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width: 30%;margin-top: 5%; margin-left:30%;" value="VaibhavKambar7">
         <input class="submit btn btn-primary" type="submit" value="Submit"  style="    margin-top: -4%; margin-left: 62%; ">
     </div>
-    <div id="loader" style="margin-top: 5%; margin-left: 50%;"></div>
+    <div id="loader"></div>
   
      <div class="info">
         <div class="left">
@@ -27,9 +27,23 @@
             <div class="twitter"></div>
         </div>
         </div>
+        <div class="searchRepo">
+            <label for="search">Search Repositories:</label>
+    <input type="text" id="search" class="search" placeholder="Enter search query">
+        </div>
          <div class="repos"> </div>
-         <!-- <button type="button" class="next-button btn btn-dark"></button> -->
-         <div class="pagination"></div>
+         <div class="pagination-container">
+            <div class="pagination"></div>
+        </div>
+        <div class="selectRepo">
+            <label for="cars">Select Number Of Repos</label>
+            <select class="select form-select" aria-label="Default select example">
+                <option value=10 selected>10</option>
+                <option value=50>50</option>
+                <option value=100>100</option>
+              </select>
+        </div>
+         
        
          <script src="https://kit.fontawesome.com/db1bdda987.js" crossorigin="anonymous"></script>
         <script src="script.js"></script>

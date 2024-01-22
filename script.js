@@ -107,7 +107,7 @@ function updateRepos(pageNumber) {
 function generatePaginationButtons(totalPages, currentPage) {
     let buttonsHTML = "";
     for (let i = 1; i <= totalPages; i++) {
-        buttonsHTML += `<button class="pagination-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        buttonsHTML += `<button style="height: 43px; width: 41px;" class="pagination-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i} </button>`;
     }
     selectrepo.style.display='block';
     searchRepo.style.display='block';

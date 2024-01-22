@@ -1,9 +1,9 @@
+
 *{
-    margin: 0;
+    margin: 5px;
     padding: 0;
     
 }
-
 .info{
     display: flex;
     flex-direction: row;
@@ -64,7 +64,7 @@
 .pagination-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px; 
   }
   
   .pagination button {
@@ -90,6 +90,10 @@
     color: white;
   }
   
+  .pagination{
+    
+    margin-right: 300px;
+  }
   .searchRepo{
     display: none;
   }
